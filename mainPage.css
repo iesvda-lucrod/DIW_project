@@ -4,12 +4,12 @@ https://coolors.co/2f2e3b-4d4467-79648b-e9ddf5-8470a7
 */
 :root {
     --menuHeight: 10vh;
-    --black: #180030;
+    --black: #000; /*alt  180030 or #310A31*/
     --white: #F0F0F0;
     
 
-    --mainBackgroundColor: #006989 ;
-    --secondaryColor: #007090 ;
+    --mainBackgroundColor: #080030 ;
+    --secondaryColor: #BCEDF6   ;
 
     --debugColor: #ff00dc;
 }
