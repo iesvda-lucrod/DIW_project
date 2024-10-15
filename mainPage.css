@@ -4,11 +4,11 @@ https://coolors.co/2f2e3b-4d4467-79648b-e9ddf5-8470a7
 */
 :root {
     --menuHeight: 10vh;
-    --black: #000; /*alt  180030 or #310A31*/
+    --black: #0E131F; /*alt  180030 or #310A31 or #0E131F*/
     --white: #F0F0F0;
     
 
-    --mainBackgroundColor: #080030 ;
+    --mainBackgroundColor: #38405F ;
     --secondaryColor: #BCEDF6   ;
 
     --debugColor: #ff00dc;
@@ -82,19 +82,21 @@ p {
 
 #logoTitle {
     position: absolute;
+    box-sizing: border-box;
     top: 0;
     left: 0;
+    z-index: 6;
 
     height: 100%;
     width: 100%;
-    z-index: 6;
+
+    padding: 20px;
 
     display: flex;
+    justify-content: left;
     align-items: center;
-
-    
 }
-#logoTitle img {
+#logoTitle > img {
     height: 90%;
 }
 
@@ -196,12 +198,26 @@ main {
 }
 
 section {
-    background-color: var(--secondaryColor);
+    background-color: var(--debugColor);
     width: 100%;
     aspect-ratio: 1/2;
 
-    border-radius: 10%;
     margin-bottom: 10%;
 
     overflow: hidden;
+}
+
+.topHalf {
+    height: 50%;
+    border-radius: 10% 10% 0 0;
+
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid red;
+}
+.bottomHalf {
+    height: 50%;
+    border-radius: 0 0 10% 10%;
+
+    background-color: var(--white);
+    border-top: 1px solid var(--debugColor);
 }
