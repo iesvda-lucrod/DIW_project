@@ -134,14 +134,23 @@ p {
 #sectionsMenu {
     position: sticky;
     padding: 5px 0px;
-    top: calc(2 * var(--menuHeight) - 2px);
+    top: calc(2 * var(--menuHeight) - 1px);
     background-color: var(--black);
     width: 100%;
 
     border-bottom: 2px solid white;
     z-index: 4;
+    
+    display: flex;
+    justify-content: space-evenly;
 }
-
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: var(--menuHeight);
+    background-color: var(--black);
+}
 
 /* Structure */
 header {
@@ -195,6 +204,8 @@ main {
     background-color: var(--mainBackgroundColor);
 
     padding: 10%;
+    height: 80vh;
+    overflow: auto;
 }
 
 section {
