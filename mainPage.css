@@ -1,7 +1,9 @@
-/*Palette:
-https://coolors.co/2b2b32-79648b-312f35-8470a7-cab1e8
-https://coolors.co/2f2e3b-4d4467-79648b-e9ddf5-8470a7
+/*TODO
+    choose theme
+    choose color palette for main
+    choose typographies
 */
+
 :root {
     --menuHeight: 10vh;
     --black: #0E131F; /*alt  180030 or #310A31 or #0E131F*/
@@ -16,7 +18,6 @@ https://coolors.co/2f2e3b-4d4467-79648b-e9ddf5-8470a7
 
 * {
     color: var(--white);
-    margin: 0;
 }
 
 html, body {
@@ -42,22 +43,21 @@ button {
     border: 2px solid var(--white);
     text-align: center;
 }
-p {
-    margin: 0;
-}
+
 
 .topGradient, .bottomGradient {
     position: absolute;
     width: 100%;
-    height: 5vh;
+    height: 10vh;
 }
 .bottomGradient{
-    background-image: linear-gradient(var(--black), transparent);
-    top: 100%;
+    position: sticky;
+    background-image: linear-gradient(transparent, var(--mainBackgroundColor));
+    bottom: 0;
 }
 .topGradient{
-    background-image: linear-gradient(transparent, var(--black));
-    bottom: 100%;
+    background-image: linear-gradient(var(--mainBackgroundColor), transparent);
+    top: 0;
 }
 
 .translatedUp {
@@ -134,11 +134,11 @@ p {
 #sectionsMenu {
     position: sticky;
     padding: 5px 0px;
-    top: calc(2 * var(--menuHeight) - 1px);
+    top: calc(2 * var(--menuHeight));
     background-color: var(--black);
     width: 100%;
 
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--white);
     z-index: 4;
     
     display: flex;
@@ -148,11 +148,13 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: var(--menuHeight);
+    
     background-color: var(--black);
+
+    border-top: 2px solid var(--white);
 }
 
-/* Structure */
+/* Header */
 header {
     position: sticky;
     top: 0;
@@ -170,18 +172,18 @@ header > img {
     /*filter: blur(2px);*/
 }
 header > #titleDiv {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: absolute;
-
     left: 10%;
-
-    width: 56%;
-
-    color: var(--debugColor);
-    
-    margin: auto;
+    width: 60%;
+}
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    opacity: 0.8;
 }
 
-
+/* Intro section*/
 #introSection {
     position: relative;
     width: 100%;
@@ -199,36 +201,42 @@ header > #titleDiv {
     left: 10%;
 }
 
+/* Main content */
 main {
     position: relative;
-    background-color: var(--mainBackgroundColor);
+    background-color: var(--white);
 
-    padding: 10%;
-    height: 80vh;
+    height: 75vh;
     overflow: auto;
 }
 
 section {
-    background-color: var(--debugColor);
-    width: 100%;
+    width: 80%;
     aspect-ratio: 1/2;
 
-    margin-bottom: 10%;
-
+    margin: 10%;
+    border-radius: 5%;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+section h1, section p {
+    color: var(--black);
+    text-align: justify;
+    margin: 5px;
+}
+section > img {
+    width: 100%;
+    height: 50%;
 }
 
-.topHalf {
-    height: 50%;
-    border-radius: 10% 10% 0 0;
+.bottomHalf {
+    position: relative;
+    padding: 10%;
+    flex: 1;
 
     background-color: var(--secondaryColor);
-    border-bottom: 1px solid red;
-}
-.bottomHalf {
-    height: 50%;
-    border-radius: 0 0 10% 10%;
 
-    background-color: var(--white);
-    border-top: 1px solid var(--debugColor);
+    color: var(--black);
 }
