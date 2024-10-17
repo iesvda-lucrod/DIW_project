@@ -139,20 +139,12 @@ button {
     width: 100%;
 
     border-bottom: 2px solid var(--white);
-    z-index: 4;
+    z-index: 5;
     
     display: flex;
     justify-content: space-evenly;
 }
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    
-    background-color: var(--black);
 
-    border-top: 2px solid var(--white);
-}
 
 /* Header */
 header {
@@ -189,8 +181,7 @@ h2 {
     width: 100%;
     height: 20vh;
     background-color: var(--black);
-    /* padding: 10% 0%; /* prevent margin collapse*/
-
+    z-index: 4;
 }
 #introSection > #quote {
     margin: 0% 10%;
@@ -231,10 +222,24 @@ section > img {
 
 .bottomHalf {
     position: relative;
-    padding: 10%;
+    padding: 5% 10%;
     flex: 1;
 
     background-color: var(--secondaryColor);
 
     color: var(--black);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: var(--menuHeight);
+    
+    background-color: var(--black);
+    border-top: 2px solid var(--white);
+    padding-top: 15px;
+    text-align: center;
+
+    z-index: 2;
 }
