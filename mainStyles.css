@@ -1,0 +1,405 @@
+:root {
+    --menuHeight: 10vh;
+    --menuColor: #0E131F;
+    --white: #F0F0F0;
+    
+    --secondaryColor: #BCEDF6;
+
+    --debugColor: #ff00dc;
+}
+
+
+html, body {
+    position: relative;
+    padding: 0%;
+    margin: 0;
+
+    width: 100vw;
+
+    overflow-x: clip;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.physic {
+    --menuColor: #3E130F;
+    --secondaryColor: #FC7D76;
+}
+.psychic {
+    --menuColor: #0E5F5F;
+    --secondaryColor: #7CFDF6;
+}
+
+/* Default element parameters */
+.verticalCenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: var(--menuColor);
+    color: var(--white);
+
+    border: 2px solid var(--white);
+
+}
+button > p {
+    color: var(--white);
+    margin: 5px;
+    text-align: center !important;
+}
+button:hover {
+    background-color: var(--white);
+}
+button:hover p {
+    color: var(--menuColor);
+    font-weight: bold;
+}
+
+.topGradient, .bottomGradient {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+}
+.bottomGradient{
+    background-image: linear-gradient(transparent, var(--menuColor));
+    bottom: 100%;
+    margin: 0;
+}
+.topGradient{
+    background-image: linear-gradient(var(--menuColor), transparent);
+    bottom: 100%;
+}
+
+.translatedUp {
+    transform: translateY(calc(-1 * var(--menuHeight)));
+}
+
+a {
+    color: var(--white);
+}
+
+/* Menus */
+#leftMenu, #rightMenu {
+    top: 0;
+
+    width: 51vw;
+    height: var(--menuHeight);
+    color: var(--white);
+
+    display: flex;
+    z-index: 5;
+}
+#leftMenu {
+    position: fixed;
+    justify-content: flex-end;
+    z-index: 6;
+}
+#logoTitle {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 7;
+
+    height: 100%;
+
+    padding: 10px;
+    padding-right: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: bold;
+}
+#logoTitle > img {
+    height: 80%;
+    object-fit: contain;
+}
+#logoTitle > p {
+    margin: 5px;
+    flex: 1 1 auto;
+}
+
+#rightMenu {
+    position: sticky;
+    right: 0;
+    top: var(--menuHeight);
+    margin-left: auto;
+}
+#rightMenu button {
+    position: absolute;
+    
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    height: 80%;
+    width: 50%;
+    align-self: center;
+    
+    z-index: 6;
+}
+
+.square {
+    position: absolute;
+    background-color: var(--menuColor);
+    
+    transform: skew(-45deg);
+
+    height: 100%;
+    min-width: 150%;
+    border-bottom: 2px solid var(--white);
+}
+
+#sectionsMenu {
+    position: sticky;
+    padding: 5px 0px;
+    top: calc(2 * var(--menuHeight) - 2px);
+    background-color: var(--menuColor);
+    width: 100%;
+
+    border-bottom: 2px solid var(--white);
+    z-index: 6;
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+    width: 100vw;
+
+    overflow: hidden;
+    z-index: -1;
+    color: var(--white);
+}
+header > img {
+    position: relative;
+    top: 0;
+    display: block;
+    width: 200%;
+}
+header > #titleDiv {
+    font-style: italic;
+    position: absolute;
+    left: 10%;
+    width: 60%;
+}
+h2 {
+    font-family: Consolas, monospace;
+    opacity: 0.8;
+}
+
+/* Quote section */
+#quoteSection {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    background-color: var(--menuColor);
+    color: var(--white);
+    z-index: 4;
+}
+#quoteSection > #quote {
+    margin: 0% 10%;
+    position: relative;
+}
+#quote > p {
+    position: relative;
+    left: 10%;
+}
+
+/* Main content */
+main {
+    position: relative;
+    background-color: var(--white);
+
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+main > h1, main > p{
+    color: var(--menuColor);
+    margin: 1rem 10%;
+}
+
+/* Introduction */
+#introduction {
+    font-weight: bold;
+    text-align: justify;
+}
+
+/* Sections inside main */
+section {
+    width: 80%;
+
+    margin: 10% auto;
+    border-radius: 5%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+section h1, section p {
+    text-align: justify;
+    margin: 15px 0px;
+}
+section h1 {
+    color:var(--menuColor);
+}
+section > img {
+    width: 100%;
+}
+.bottomHalf {
+    position: relative;
+    padding: 5% 10%;
+    flex: 1;
+
+    background-color: var(--secondaryColor);
+
+    
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: var(--menuHeight);
+    
+    background-color: var(--menuColor);
+    color: var(--white);
+    border-top: 2px solid var(--white);
+    padding: 15px 0px 0px;
+    text-align: center;
+
+    z-index: 2;
+}
+footer > div {
+    margin: 0px 10%;
+}
+
+.notFixed {
+    position: relative;
+}
+
+/* Product pages structure */
+#productSpace {
+    width: 100vw;
+    
+    display: flex;
+    flex-direction: column;
+}
+#productImage {
+    flex: 1 1 60%;
+}
+#productImage img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid var(--secondaryColor);
+    border-width: 5px 0px;
+}
+#productInfo {
+    flex: 1 1 40%;
+    padding: 0 5% 5%;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--secondaryColor);
+}
+
+#complements {
+    margin-top: 5%;
+}
+#complements > h2 {
+    margin: 0% 5%;
+}
+#carousel {
+    display: flex;
+    overflow-x: scroll;
+}
+#carousel > a {
+    border-radius: 10%;
+    overflow: hidden;
+
+    width: 40vw;
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    background-color: var(--secondaryColor);
+
+    text-decoration: none;
+}
+#carousel > a > img{
+    flex: 1 1 auto;
+}
+#carousel > a > p{
+    flex: 1 1 30%;
+    margin: 0;
+    padding: 5%;
+    color: black;
+    text-align: center;
+}
+#carousel p{
+    margin: auto;
+}
+
+@media (min-width: 600px) {
+    :root {
+        --menuHeight: 20vh;
+    }
+
+    #logoTitle {
+        left: 10%
+    }
+    header img {
+        max-height: 100vh;
+    }
+
+    #quoteSection {
+        padding: 2%;
+    }
+
+    section {
+        flex-direction: row;
+        margin: 5% auto;
+    }
+    section > img {
+       width: 50%;
+    }
+    .bottomHalf {
+        padding: 2%;
+    }
+    .bottomHalf button {
+        width: 100%;
+    }
+
+    footer  {
+        position: absolute;
+    }
+
+    #productSpace {
+        flex-direction: row;
+    }
+    #productImage {
+        
+        flex: 1 1 50%;
+        padding: auto;
+    }
+    #productImage img{
+        border: none;
+        margin: auto;
+        height: 100%;
+    }
+    #productInfo {
+        padding: 0 5% 5%;
+    }
+}

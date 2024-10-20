@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>ExoMachina</title>
-    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="mainStyles.css">
 </head>
 <body>
     <nav id="leftMenu">
@@ -16,36 +16,74 @@
         <div class="square"></div>
     </nav>
 
-    <nav id="rightMenu" class="translatedUp">
-        <button><p>Go to shop</p></button>
+    <header>
+        <img src="images/headerImg.jpg" alt="Header image not found">
+        <div id="titleDiv" class="verticalCenter">
+            <h1>ExoMachina</h1>
+            <h2>Discover your potential, today</h2>
+        </div>
+    </header>
 
+    <nav id="rightMenu" class="translatedUp">
+        <a href="mainPage.html"><button ><p>Home page</p></button></a>
         <div class="square"></div>
     </nav>
 
+
+    <div id="quoteSection" class="translatedUp">
+        <div id="quote" class="verticalCenter">
+            <q>From the moment I understood the weakness of my flesh, it disgusted me. I craved the strength and certainty of steel.</q>
+            <p>&#9866; Reditus, former Magus Dominus</p>
+        </div>
+    </div>
+
     <nav id="sectionsMenu" class="translatedUp">
-        <span class="hyperLink"><a href="mainPage.html">Main page</a></span>
-        <span class="hyperLink"><a href="jobApplications.html">Job applications</a></span>
-        <span class="hyperLink"><a href="enterprises.html">For enterprises</a></span>
+        <span class="hyperLink"><a href="shop_categories/physicalProducts.html">Physic prosthetics</a></span>
+        <span class="hyperLink"><a href="shop_categories/psychicalProducts.html">Psychic prosthetics</a></span>
     </nav>
     
-    <main>
+    <main class="translatedUp">
         <div class="topGradient"></div>
 
-        <section>
-            <img src="images/lightningBrain.jpg" alt="Img not found">
+        <section class="physic">
+            <img src="images/patients.jpg" alt="Img not found">
             <div class="bottomHalf">
-                <h1>Contact information</h1>
-                    <p>Customer service available from 10:00am to 5:00pm</p>
+                <h1>Physical prosthetics</h1>
+                <p>
+                    Either looking for a replacement or an upgrade,
+                    physical prosthetics offer products for any time of
+                    necessity and size. We offer from finger replacements
+                    to whole nervous system overhauls
+                </p>
+                <a href="shop_categories/physicalProducts.html"><button><p>Browse products</p></button></a>
             </div>
+        </section>
+
+        <section class="psychic">
+            <img src="images/brainChip.webp" alt="Img not found">
+            <div class="bottomHalf">
+            <h1>Psychical prosthetics</h1>
+            <p>
+                Our minds are our greatest and most used asset,
+                but with use comes deterioration. With our psychical
+                augments you can prolong and enhance its capabilities.
+                Between our products we offer from broad to specialized 
+                knowledge storing chips and performance enhancing circuits
+                to keep your mind sharp.
+            </p>
+            <a href="shop_categories/psychicalProducts.html"><button><p>Browse products</p></button></a>
         </section>
 
         <div class="bottomGradient"></div>
     </main>
+    
+    
 
-    <footer class="notFixed">
+    <footer>
         <div>
             &#169; 2024 - Desarrollo de aplicaciones web - All rights reserved
         </div>
+        
         <a href="#top">&#8593; Scroll back to top &#8593;</a>
     </footer>
 </body>
